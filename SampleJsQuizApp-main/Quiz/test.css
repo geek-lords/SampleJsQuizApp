@@ -1,0 +1,106 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    outline: none;
+}
+
+body {
+    background-image: url(image.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+h1 {
+    margin: 10px;
+    text-align: center;
+}
+
+#que {
+    text-align: center;
+    font-size: medium;
+}
+
+.op-box {
+    position:relative;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+}
+
+button {
+    height: 45px;
+    width: 190px;
+    border-radius: 40px;
+    display: block;
+    margin: 20px;
+    justify-content: center;
+    font-size: small;
+    border: solid 1px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #4CAF50;
+    /* Green */
+    color: white;
+}
+
+.result-box{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    position:relative;
+}
+
+#next {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 40px;
+    width: 80px;
+    border-radius: 40px;
+    color: wheat;
+}
+
+#next:hover {
+    background-color: rgba(70, 172, 141, 0.7);
+    /* Green */
+    color: white;
+}
+
+#score-o {
+    height: 20px;
+    width: 75px;
+    padding: 5px 9px 9px 9px;
+    background-color: #4CAF50;
+    font-size: larger;
+    border-radius: 50px;
+    color: wheat;
+}
+
+#endQuizText {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+}
+
+#refresh {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-60%);
+    height: 45px;
+    width: 150px;
+    border-radius: 40px;
+    display: block;
+    margin: 20px;
+    justify-content: center;
+    font-size: small;
+    border: solid 2px rgb(103 103 103);
+}
+
+
+/*# sourceMappingURL=test.css.map */
