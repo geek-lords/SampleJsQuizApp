@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
 <html>
 
 <head>
@@ -21,15 +21,17 @@
     <h1>JavaScript Quiz</h1>
     <br>
     <br>
+    <div id="quiz">
     <p id="que">Question</p>
     <div class="op-box">
-        <button id="a" onclick="getanswer(this.id)">OP1</button>
-        <button id="b" onclick="getanswer(this.id)">OP1</button>
-        <button id="c" onclick="getanswer(this.id)">OP1</button>
-        <button id="d" onclick="getanswer(this.id)">OP1</button>
+        <button id="a" onclick="getAnswer(this.id)">OP1</button>
+        <button id="b" onclick="getAnswer(this.id)">OP2</button>
+        <button id="c" onclick="getAnswer(this.id)">OP3</button>
+        <button id="d" onclick="getAnswer(this.id)">OP4</button>
     </div>
     <p id="score-o">Score:<span id=score>0</span></p>
-    <button id="next" onclick="nextquestion()">Next</button>
+    <button id="next" onclick="nextQuestion()">Next</button>
+        </div>
 </body>
 
 </html>
