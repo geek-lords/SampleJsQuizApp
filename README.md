@@ -1,4 +1,4 @@
-# SampleJsQuizApp
+# Quiz App
 This is an Interactive Quiz made with Vannila JavaScript.
 
 ## Contributors
