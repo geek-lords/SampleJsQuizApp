@@ -1,13 +1,12 @@
 //The Questions and All stuff
-var Questions = [
-    {
+var Questions = [{
         question: "Which of the following is a server-side Java Script object?",
         Option1: "A. function",
         Option2: "B. file",
         Option3: "C. date",
         Option4: "D. fileupload",
         answer: "b",
-        Index :0,
+        Index: 0,
 
     },
     {
@@ -17,7 +16,7 @@ var Questions = [
         Option3: "C. -",
         Option4: "D. /",
         answer: "d",
-        Index : 1,
+        Index: 1,
     },
     {
         question: " Which of the following is correct to write “Hello World” on the web page?",
@@ -26,7 +25,7 @@ var Questions = [
         Option3: " C. document.write(“Hello World”) ",
         Option4: " D. response.write(“Hello World”) ",
         answer: "c",
-        Index : 2,
+        Index: 2,
     },
     {
         question: " Which of the following is the tainted property of a window object in Java Script?",
@@ -35,7 +34,7 @@ var Questions = [
         Option3: " C. Defaultstatus ",
         Option4: " D. Host ",
         answer: "c",
-        Index : 3,
+        Index: 3,
     },
     {
         question: " Which attribute needs to be changed to make elements invisible?",
@@ -44,18 +43,20 @@ var Questions = [
         Option3: " C. invisibility ",
         Option4: " D. invisible ",
         answer: "a",
-        Index : 4,
+        Index: 4,
     }
 ];
 var Answer = "";
 var Index = 0;
 var score = 0;
+
 function shuffleArray(array) {
     array.sort(() => Math.random() - 0.5);
     return array;
 }
-function getQuestion(Array){
-    if(Array.length > 0){
+
+function getQuestion(Array) {
+    if (Array.length > 0) {
         var currentQ = shuffleArray(Array)[0]
         document.getElementById("que").innerHTML = currentQ.question;
         document.getElementById("a").innerHTML = currentQ.Option1;
@@ -66,26 +67,44 @@ function getQuestion(Array){
         Index = currentQ.Index;
     }
 }
-function getAnswer(ID){
-        if(ID == Answer){
-            document.getElementById('score').innerHTML = ++score;}
-        for(var i = 0; i < Questions.length ; i++){
-            if(Questions[i].Index == Index){
-                Questions.splice(i,1);
-                    }
-                }
-        foo();
-}
-function nextQuestion(){
+
+function getAnswer(ID) {
+    if (ID == Answer) {
+        document.getElementById('score').innerHTML = ++score;
+    }
+    for (var i = 0; i < Questions.length; i++) {
+        if (Questions[i].Index == Index) {
+            Questions.splice(i, 1);
+        }
+    }
     foo();
 }
-function foo(){
-    if(Questions.length == 0){
+
+function nextQuestion() {
+    foo();
+}
+
+function foo() {
+    if (Questions.length == 0) {
         endQuiz();
     }
     getQuestion(Questions);
 }
-function endQuiz(){
-    alert("The Quiz is Ended. Your final Score is "+ score);
-    location.reload();
+
+function endQuiz() { 
+    var doc = document.getElementById("quiz");                          //Getting Id of Quiz Portion
+    doc.innerHTML = null;                                               //Erasing All Quiz Portion
+    var p = document.createElement("p");                                //Creating Para Obj
+    var button = document.createElement("button");                      //Creating Button Obj    
+    p.setAttribute("id", "endQuizText");                                //Adding Attribute to it    
+    button.setAttribute("id", "refresh");                               //sAME      
+    var paratext = document.createTextNode("Your Score Is: " + score);  //aDDING Text
+    var buttontxt = document.createTextNode("Restart Quiz");            //Same    
+    p.appendChild(paratext);                                            //Adding text to para obj    
+    button.appendChild(buttontxt);                                      //Adding text to button obj  
+    doc.appendChild(p);                                                 //Adding para obj to doc         
+    doc.appendChild(button);                                            //Adding button obj to doc    
+    button.onclick = function() {                                       //This Function For Refresh    
+        location.reload();
+    }
 }
