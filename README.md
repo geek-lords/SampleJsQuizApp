@@ -1,5 +1,5 @@
 # Quiz App
-This is an Interactive Quiz made with Vannila JavaScript.
+This is an Interactive Quiz made with Vanilla JavaScript.
 
 ## Contributors
 [YoungSimba](https://github.com/SarveshJoshi25) and 
