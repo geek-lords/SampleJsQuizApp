@@ -22,10 +22,11 @@ h1 {
 }
 
 .op-box {
-    position: absolute;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
+    position:relative;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
 }
 
 button {
@@ -34,8 +35,6 @@ button {
     border-radius: 40px;
     display: block;
     margin: 20px;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     font-size: small;
     border: solid 1px rgba(0, 0, 0, 0.2);
@@ -47,14 +46,20 @@ button:hover {
     color: white;
 }
 
+.result-box{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    position:relative;
+}
+
 #next {
     background-color: rgba(0, 0, 0, 0.7);
     height: 40px;
     width: 80px;
     border-radius: 40px;
-    position: absolute;
-    top: 70%;
-    left: 45.5%;
     color: wheat;
 }
 
@@ -65,9 +70,6 @@ button:hover {
 }
 
 #score-o {
-    position: absolute;
-    top: 87%;
-    left: 4%;
     height: 20px;
     width: 75px;
     padding: 5px 9px 9px 9px;
